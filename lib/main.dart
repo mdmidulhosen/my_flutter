@@ -13,44 +13,21 @@ void main() {
         backgroundColor: Colors.amber,
         ),
 
-        body: Row(
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                width: 50,
-                height: 100,
-                color: Colors.red,
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: 
+          (context, index) {
+            return ListTile(
+              leading: Container(
+                height: 40,
+                width: 40,
+              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/user.jpg"),fit: BoxFit.cover), borderRadius: BorderRadius.circular(100)),
               ),
-            ),
-
-            Expanded(
-              flex: 3,
-              child: Container(
-                width: 50,
-                height: 100,
-                color: Color.fromARGB(255, 0, 0, 0),
-              ),
-            ),
-
-            Expanded(
-              flex: 2,
-              child: Container(
-                width: 50,
-                height: 100,
-                color: Color.fromARGB(255, 18, 255, 243),
-              ),
-            ),
-
-            Expanded(
-              flex: 3,
-              child: Container(
-                width: 50,
-                height: 100,
-                color: Color.fromARGB(255, 205, 241, 0),
-              ),
-            ),
-          ],
+              title: Text(names[index]),
+              subtitle: Text("Number"),
+              trailing: Icon(Icons.add),
+            );
+          },
         ),
         
           
