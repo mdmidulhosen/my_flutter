@@ -23,7 +23,7 @@ void main() {
                 width: 40,
               decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/user.jpg"),fit: BoxFit.cover), borderRadius: BorderRadius.circular(100)),
               ),
-              title: Text(names[index]),
+              title: Text(names[index],style: TextStyle(fontFamily: 'roboto', fontWeight: FontWeight.w500),),
               subtitle: Text("Number"),
               trailing: Icon(Icons.add),
             );
