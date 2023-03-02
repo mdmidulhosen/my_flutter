@@ -17,15 +17,17 @@ void main() {
           itemCount: names.length,
           itemBuilder: 
           (context, index) {
-            return ListTile(
-              leading: Container(
-                height: 40,
-                width: 40,
-              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/user.jpg"),fit: BoxFit.cover), borderRadius: BorderRadius.circular(100)),
+            return Card(
+              child: ListTile(
+                leading: Container(
+                  height: 40,
+                  width: 40,
+                decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/user.jpg"),fit: BoxFit.cover), borderRadius: BorderRadius.circular(100)),
+                ),
+                title: Text(names[index],style: TextStyle(fontFamily: 'roboto', fontWeight: FontWeight.w500),),
+                subtitle: Text("Number"),
+                trailing: Icon(Icons.add),
               ),
-              title: Text(names[index],style: TextStyle(fontFamily: 'roboto', fontWeight: FontWeight.w500),),
-              subtitle: Text("Number"),
-              trailing: Icon(Icons.add),
             );
           },
         ),
